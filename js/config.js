@@ -5,13 +5,13 @@
 
 const PORTFOLIO_DATA = {
   personal: {
-    name: "Ariyan Rahman", // Your name
+    name: "Mubtasim Ariyan", // Your full name
     headline: "Full Stack Developer & Computer Science Student",
     bio: "Computer Science & Engineering student at BRAC University. Passionate about crafting high-performance web applications, intelligent systems, and visually engaging digital experiences.",
     location: "Dhaka, Bangladesh",
     email: "ariyan.rahman@example.com", // Replace with your real email address
     github: "https://github.com/ari-yan7", // Your GitHub profile
-    linkedin: "https://linkedin.com/in/ariyan-rahman", // Replace with your LinkedIn URL
+    linkedin: "https://linkedin.com/in/", // Replace with your LinkedIn URL
     twitter: "https://x.com/",
     resumeUrl: "#", // Replace with link to your PDF resume or Google Drive link
     availability: "Available for Internships & Projects"
@@ -20,7 +20,7 @@ const PORTFOLIO_DATA = {
   hero: {
     badge: "🚀 Welcome to my portfolio",
     titlePrefix: "Hi, I'm ",
-    titleName: "Ariyan",
+    titleName: "Mubtasim",
     titleSuffix: ".",
     typedRoles: [
       "Full-Stack Web Developer",

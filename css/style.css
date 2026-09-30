@@ -845,6 +845,37 @@ body {
   gap: 1.2rem;
 }
 
+.skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.skill-pill i {
+  color: var(--accent-primary);
+}
+
+.skill-pill:hover {
+  background: var(--gradient-subtle);
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+}
+
 .skill-item-header {
   display: flex;
   justify-content: space-between;

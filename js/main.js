@@ -252,17 +252,9 @@ function renderSkills(skills) {
   skillsContainer.innerHTML = categories.map(cat => `
     <div class="skill-category-card">
       <h3 class="category-title"><i class="${cat.icon}"></i> ${cat.title}</h3>
-      <div class="skill-list">
+      <div class="skill-pills">
         ${(cat.items || []).map(skill => `
-          <div class="skill-item">
-            <div class="skill-item-header">
-              <span class="skill-name"><i class="${skill.icon}"></i> ${skill.name}</span>
-              <span class="skill-level-text">${skill.level}</span>
-            </div>
-            <div class="progress-bar-bg">
-              <div class="progress-bar-fill" data-level="${skill.level}"></div>
-            </div>
-          </div>
+          <span class="skill-pill"><i class="${skill.icon}"></i> ${skill.name}</span>
         `).join('')}
       </div>
     </div>

@@ -15,6 +15,8 @@ const PORTFOLIO_DATA = {
     github: "https://github.com/ari-yan7",
     linkedin: "https://www.linkedin.com/in/mubtasimariyan",
     twitter: "https://x.com/ari_yan7",
+    facebook: "https://www.facebook.com/share/1DhMAP9stk/",
+    instagram: "https://www.instagram.com/ari.yan_07",
     resumeUrl: "#", // Add link to your PDF resume if desired
     availability: "Available for Internships & Projects"
   },

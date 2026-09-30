@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Leadership & Extracurricular Activities - Mubtasim Ariyan">
+  <title>Leadership & Activities | Mubtasim Ariyan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="glow-orb glow-orb-1"></div>
+  <div class="glow-orb glow-orb-2"></div>
+  <canvas id="bg-canvas" style="position:fixed; top:0; left:0; pointer-events:none; z-index:0;"></canvas>
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" id="logo">
+        <i class="fas fa-terminal"></i> <span id="logo-name">Mubtasim Ariyan</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="education.html" class="nav-link">Education</a></li>
+          <li><a href="experience.html" class="nav-link">Experience</a></li>
+          <li><a href="leadership.html" class="nav-link active">Leadership</a></li>
+          <li><a href="skills.html" class="nav-link">Skills</a></li>
+          <li><a href="honors.html" class="nav-link">Honors</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: 6.5rem;">
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-users-cog"></i> Engagement</span>
+          <h2 class="section-title">Leadership & Extracurricular Activities</h2>
+          <p class="section-subtitle">Executive roles, corporate sponsorship management, robotics, and machine vision AI at BRAC University.</p>
+        </div>
+
+        <div class="timeline" id="extracurricular-timeline">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="year">2026</span> Mubtasim Ariyan. Computer Science Undergraduate @ BRAC University.</p>
+    </div>
+  </footer>
+
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

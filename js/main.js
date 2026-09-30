@@ -1,27 +1,50 @@
 /* ==========================================================
-   PORTFOLIO INTERACTIVE LOGIC & DYNAMIC CV RENDERER
-   ========================================================== */
+   PORTFOLIO INTERACTIVE LOGIC & MULTI-PAGE RENDERER
+   ========================================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
   const data = typeof PORTFOLIO_DATA !== 'undefined' ? PORTFOLIO_DATA : null;
 
   initTheme();
+  initNavbar();
+
   if (data) {
-    renderPersonalInfo(data);
-    renderStats(data.stats);
-    renderEducation(data.education);
-    renderWorkExperience(data.workExperience);
-    renderExtracurricular(data.extracurricular);
-    renderSkills(data.skills);
-    renderHonors(data.honors);
-    renderProjects(data.projects);
-    renderReferences(data.references);
-    initTypingEffect(data.hero.typedRoles);
+    renderSharedElements(data);
+
+    // Page-specific renderers
+    const path = window.location.pathname.toLowerCase();
+
+    if (path.endsWith('education.html') || document.getElementById('education-grid')) {
+      renderEducation(data.education);
+    }
+    if (path.endsWith('experience.html') || document.getElementById('work-experience-list')) {
+      renderWorkExperience(data.workExperience);
+    }
+    if (path.endsWith('leadership.html') || document.getElementById('extracurricular-timeline')) {
+      renderExtracurricular(data.extracurricular);
+    }
+    if (path.endsWith('skills.html') || document.getElementById('skills-container')) {
+      renderSkills(data.skills);
+    }
+    if (path.endsWith('honors.html') || document.getElementById('honors-grid')) {
+      renderHonors(data.honors);
+    }
+    if (path.endsWith('projects.html') || document.getElementById('projects-grid')) {
+      renderProjects(data.projects);
+      initProjectFilters(data.projects);
+    }
+    if (path.endsWith('contact.html') || document.getElementById('references-grid')) {
+      renderReferences(data.references);
+      initContactForm();
+    }
+    if (path.endsWith('index.html') || path === '/' || path.endsWith('/portfolio website/') || document.getElementById('stats-grid')) {
+      renderStats(data.stats);
+      if (data.hero && data.hero.typedRoles) {
+        initTypingEffect(data.hero.typedRoles);
+      }
+    }
   }
 
-  initNavbar();
-  initProjectFilters(data ? data.projects : []);
-  initContactForm();
   initIntersectionObserver();
   initBackgroundCanvas();
 });
@@ -53,15 +76,15 @@ function updateThemeIcon(theme) {
   }
 }
 
-/* --- Render Personal Info --- */
-function renderPersonalInfo(data) {
-  const { personal, hero } = data;
+/* --- Render Shared Elements --- */
+function renderSharedElements(data) {
+  const { personal } = data;
 
   const logoName = document.getElementById('logo-name');
   if (logoName) logoName.textContent = personal.name;
 
   const heroBadge = document.getElementById('hero-badge');
-  if (heroBadge) heroBadge.innerHTML = hero.badge;
+  if (heroBadge && data.hero) heroBadge.innerHTML = data.hero.badge;
 
   const heroTitleName = document.getElementById('hero-title-name');
   if (heroTitleName) heroTitleName.textContent = personal.name;
@@ -78,7 +101,6 @@ function renderPersonalInfo(data) {
   const availabilityText = document.getElementById('availability-text');
   if (availabilityText) availabilityText.textContent = personal.availability;
 
-  // Contact Section Details
   const contactEmail = document.getElementById('contact-email');
   if (contactEmail) contactEmail.textContent = personal.email;
 
@@ -88,7 +110,6 @@ function renderPersonalInfo(data) {
   const contactLocation = document.getElementById('contact-location');
   if (contactLocation) contactLocation.textContent = personal.location;
 
-  // Social Icons
   const socialContainers = document.querySelectorAll('.social-links');
   socialContainers.forEach(container => {
     container.innerHTML = `
@@ -245,7 +266,6 @@ function renderSkills(skills) {
     </div>
   `).join('');
 
-  // Spoken languages tag render
   const langContainer = document.getElementById('spoken-languages');
   if (langContainer && skills.spokenLanguages) {
     langContainer.innerHTML = skills.spokenLanguages.map(l => `
@@ -254,7 +274,7 @@ function renderSkills(skills) {
   }
 }
 
-/* --- Render Honors & Awards --- */
+/* --- Render Honors --- */
 function renderHonors(honors) {
   const container = document.getElementById('honors-grid');
   if (!container || !honors) return;
@@ -314,7 +334,7 @@ function renderReferences(references) {
   `).join('');
 }
 
-/* --- Project Filtering --- */
+/* --- Project Filters --- */
 function initProjectFilters() {
   const filterBtns = document.querySelectorAll('.filter-btn');
   filterBtns.forEach(btn => {
@@ -381,7 +401,7 @@ window.closeProjectModal = function() {
   if (modalOverlay) modalOverlay.classList.remove('active');
 };
 
-/* --- Navbar & Mobile Menu --- */
+/* --- Navbar & Active Page Highlight --- */
 function initNavbar() {
   const navbar = document.getElementById('navbar');
   const mobileToggle = document.getElementById('mobile-toggle');
@@ -394,22 +414,17 @@ function initNavbar() {
     } else {
       navbar.classList.remove('scrolled');
     }
+  });
 
-    let current = '';
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 120;
-      if (window.scrollY >= sectionTop) {
-        current = section.getAttribute('id');
-      }
-    });
-
-    navLinks.forEach(link => {
+  // Active Link based on page URL
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  navLinks.forEach(link => {
+    const linkHref = link.getAttribute('href');
+    if (linkHref === currentPath || (currentPath === '' && linkHref === 'index.html')) {
+      link.classList.add('active');
+    } else {
       link.classList.remove('active');
-      if (link.getAttribute('href') === `#${current}`) {
-        link.classList.add('active');
-      }
-    });
+    }
   });
 
   if (mobileToggle && navMenu) {
@@ -492,11 +507,11 @@ function initIntersectionObserver() {
     });
   }, { threshold: 0.2 });
 
-  const skillsSection = document.getElementById('skills');
+  const skillsSection = document.getElementById('skills-container');
   if (skillsSection) observer.observe(skillsSection);
 }
 
-/* --- Particle Canvas --- */
+/* --- Background Canvas --- */
 function initBackgroundCanvas() {
   const canvas = document.getElementById('bg-canvas');
   if (!canvas) return;

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact & Professional References - Mubtasim Ariyan">
+  <title>Contact & References | Mubtasim Ariyan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="glow-orb glow-orb-1"></div>
+  <div class="glow-orb glow-orb-2"></div>
+  <canvas id="bg-canvas" style="position:fixed; top:0; left:0; pointer-events:none; z-index:0;"></canvas>
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" id="logo">
+        <i class="fas fa-terminal"></i> <span id="logo-name">Mubtasim Ariyan</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="education.html" class="nav-link">Education</a></li>
+          <li><a href="experience.html" class="nav-link">Experience</a></li>
+          <li><a href="leadership.html" class="nav-link">Leadership</a></li>
+          <li><a href="skills.html" class="nav-link">Skills</a></li>
+          <li><a href="honors.html" class="nav-link">Honors</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: 6.5rem;">
+    <!-- References Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-user-check"></i> Endorsements</span>
+          <h2 class="section-title">Professional References</h2>
+          <p class="section-subtitle">Corporate and academic mentors who can attest to my work ethic and capabilities.</p>
+        </div>
+
+        <div class="references-grid" id="references-grid">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact" style="padding-top:2rem;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-envelope"></i> Connect</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">Feel free to reach out for corporate collaborations, internships, or inquiries!</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-card">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-detail">
+                <h4>Email Address</h4>
+                <p>
+                  <span id="contact-email">ariyanmubtasim@gmail.com</span>
+                  <button class="copy-btn" onclick="copyEmail()" title="Copy Email"><i class="far fa-copy"></i></button>
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-detail">
+                <h4>Phone Number</h4>
+                <p id="contact-phone">+8801863968787</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-detail">
+                <h4>Location</h4>
+                <p id="contact-location">Dhaka, Bangladesh</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-globe"></i>
+              </div>
+              <div class="contact-detail">
+                <h4>Social Profiles</h4>
+                <div class="social-links" style="margin-top:0.5rem;">
+                  <!-- Rendered dynamically -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-card">
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="form-name" class="form-label">Your Name</label>
+                <input type="text" id="form-name" class="form-input" placeholder="e.g. John Doe" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label">Your Email</label>
+                <input type="email" id="form-email" class="form-input" placeholder="e.g. john@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Your Message</label>
+                <textarea id="form-message" class="form-textarea" placeholder="Describe your project, internship opportunity, or proposal..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%;">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="year">2026</span> Mubtasim Ariyan. Computer Science Undergraduate @ BRAC University.</p>
+    </div>
+  </footer>
+
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

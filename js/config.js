@@ -40,7 +40,7 @@ const PORTFOLIO_DATA = {
     {
       institution: "BRAC University",
       degree: "Bachelor of Science in Computer Science",
-      result: "CGPA: 3.3 / 4.0",
+      result: "In Progress",
       period: "Jan 2024 - Dec 2028 (Expected)",
       location: "Dhaka, Bangladesh",
       details: "Studying Data Structures, Algorithms, Object-Oriented Design (Java/Python), Database Systems, System Analysis, and Computer Science Fundamentals."

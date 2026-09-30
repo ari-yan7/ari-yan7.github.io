@@ -5,109 +5,110 @@
 
 const PORTFOLIO_DATA = {
   personal: {
-    name: "Mubtasim Ariyan", // Your full name
-    headline: "Full Stack Developer & Computer Science Student",
-    bio: "Computer Science & Engineering student at BRAC University. Passionate about crafting high-performance web applications, intelligent systems, and visually engaging digital experiences.",
+    name: "Mubtasim Ariyan",
+    headline: "Computer Science Student @ BRAC University & Software Developer",
+    bio: "Computer Science & Engineering student at BRAC University. Passionate about object-oriented design, algorithmic problem solving, Python, Java development, and building robust software solutions.",
     location: "Dhaka, Bangladesh",
-    email: "ariyan.rahman@example.com", // Replace with your real email address
-    github: "https://github.com/ari-yan7", // Your GitHub profile
-    linkedin: "https://linkedin.com/in/", // Replace with your LinkedIn URL
-    twitter: "https://x.com/",
-    resumeUrl: "#", // Replace with link to your PDF resume or Google Drive link
-    availability: "Available for Internships & Projects"
+    email: "mubtasim.ariyan@example.com", // Replace with your real email address
+    github: "https://github.com/ari-yan7",
+    linkedin: "https://linkedin.com/in/mubtasim-ariyan", // Replace with your LinkedIn profile URL
+    twitter: "https://x.com/ari_yan7",
+    resumeUrl: "#", // Add link to your PDF resume or Google Drive link
+    availability: "Available for Internships & Collaborations"
   },
 
   hero: {
-    badge: "🚀 Welcome to my portfolio",
+    badge: "🎓 BRAC University CSE Student",
     titlePrefix: "Hi, I'm ",
-    titleName: "Mubtasim",
+    titleName: "Mubtasim Ariyan",
     titleSuffix: ".",
     typedRoles: [
-      "Full-Stack Web Developer",
-      "BRAC University CSE Student",
-      "UI/UX & Frontend Designer",
-      "Software Engineering Explorer"
+      "Computer Science Student @ BRAC University",
+      "Python & Java Developer",
+      "Software Engineering Explorer",
+      "Problem Solver & Tech Enthusiast"
     ],
-    description: "Building modern web applications, scalable backends, and beautiful user interfaces with clean architecture."
+    description: "Building reliable software applications, exploring object-oriented systems, and solving algorithmic problems with Python & Java."
   },
 
   stats: [
-    { label: "Completed Projects", value: "15+" },
-    { label: "Technologies Mastered", value: "12+" },
-    { label: "GitHub Commits", value: "450+" },
-    { label: "Years Coding", value: "3+" }
+    { label: "Completed Projects", value: "10+" },
+    { label: "Languages Mastered", value: "5+" },
+    { label: "GitHub Commits", value: "300+" },
+    { label: "Years Coding", value: "2+" }
   ],
 
   skills: {
     languages: [
-      { name: "JavaScript / ES6+", icon: "fab fa-js-square", level: "90%" },
-      { name: "Python", icon: "fab fa-python", level: "85%" },
+      { name: "Python", icon: "fab fa-python", level: "90%" },
+      { name: "Java", icon: "fab fa-java", level: "88%" },
       { name: "C++", icon: "fas fa-code", level: "80%" },
-      { name: "HTML5 & CSS3", icon: "fab fa-html5", level: "95%" },
-      { name: "SQL", icon: "fas fa-database", level: "75%" }
+      { name: "JavaScript / ES6+", icon: "fab fa-js-square", level: "82%" },
+      { name: "HTML5 & CSS3", icon: "fab fa-html5", level: "85%" },
+      { name: "SQL", icon: "fas fa-database", level: "78%" }
     ],
     frameworks: [
-      { name: "React.js / Next.js", icon: "fab fa-react", level: "88%" },
-      { name: "Node.js & Express", icon: "fab fa-node-js", level: "82%" },
-      { name: "Tailwind CSS / Vanilla CSS", icon: "fab fa-css3-alt", level: "90%" },
-      { name: "FastAPI / Django", icon: "fas fa-server", level: "70%" }
+      { name: "Django / FastAPI (Python)", icon: "fas fa-server", level: "82%" },
+      { name: "Spring Boot / Java Tech", icon: "fas fa-cubes", level: "75%" },
+      { name: "Node.js & Express", icon: "fab fa-node-js", level: "75%" },
+      { name: "React.js", icon: "fab fa-react", level: "75%" }
     ],
     tools: [
-      { name: "Git & GitHub", icon: "fab fa-github", level: "92%" },
-      { name: "VS Code", icon: "fas fa-terminal", level: "95%" },
+      { name: "Git & GitHub", icon: "fab fa-github", level: "90%" },
+      { name: "VS Code & IntelliJ IDEA", icon: "fas fa-terminal", level: "92%" },
+      { name: "MySQL / PostgreSQL", icon: "fas fa-database", level: "80%" },
       { name: "Postman / REST APIs", icon: "fas fa-paper-plane", level: "85%" },
-      { name: "Docker / Linux", icon: "fab fa-docker", level: "70%" },
-      { name: "Figma", icon: "fab fa-figma", level: "78%" }
+      { name: "Linux / Bash", icon: "fab fa-linux", level: "78%" }
     ]
   },
 
   projects: [
     {
-      id: "synapse-ai",
-      title: "Synapse Analytics Platform",
+      id: "python-data-analytics",
+      title: "PyStream Analytics Engine",
       category: "web",
       image: "assets/images/project1.jpg",
-      description: "An AI-powered data visualization and predictive dashboard with real-time model accuracy metrics and glassmorphic UI.",
-      tags: ["React", "Node.js", "Python", "Chart.js"],
+      description: "A Python-powered data processing & visualization dashboard built with FastAPI, Pandas, and interactive glassmorphic metrics.",
+      tags: ["Python", "FastAPI", "Pandas", "JavaScript"],
       demoUrl: "https://github.com/ari-yan7",
       githubUrl: "https://github.com/ari-yan7",
       featured: true,
       highlights: [
-        "Interactive real-time data charts",
-        "Responsive dark/light glassmorphic UI",
-        "REST API integration with custom backend"
+        "Data stream processing pipeline in Python",
+        "Automated statistical analytics generation",
+        "Clean REST API integration and dashboard UI"
       ]
     },
     {
-      id: "smart-home-hub",
-      title: "NEXUS Smart Home Automation",
-      category: "mobile",
+      id: "java-omnitask-system",
+      title: "OmniTask Management System",
+      category: "tools",
       image: "assets/images/project2.jpg",
-      description: "Mobile-first smart home ecosystem controller allowing real-time device tracking, routine creation, and energy analytics.",
-      tags: ["JavaScript", "WebSockets", "CSS3", "PWA"],
+      description: "Object-oriented task & resource management application developed using Java, OOP design patterns, and SQL relational database.",
+      tags: ["Java", "OOP", "MySQL", "GUI"],
       demoUrl: "https://github.com/ari-yan7",
       githubUrl: "https://github.com/ari-yan7",
       featured: true,
       highlights: [
-        "Real-time WebSocket telemetry updates",
-        "Custom SVG charts & touch-friendly sliders",
-        "Offline-first PWA caching capabilities"
+        "Clean Object-Oriented architecture & SOLID principles",
+        "Relational database CRUD operations",
+        "User authentication and role management"
       ]
     },
     {
-      id: "codeverse-ide",
-      title: "CodeVerse Visual Dev Tool",
+      id: "algorithm-visualizer",
+      title: "Graph Algorithm Visualizer",
       category: "tools",
       image: "assets/images/project3.jpg",
-      description: "Interactive visual code explorer and dependency graph generator for JavaScript and Python repositories.",
-      tags: ["JavaScript", "Canvas API", "Graph Theory", "Monaco Editor"],
+      description: "Interactive pathfinding & graph search algorithm visualizer implementing Dijkstra's, A*, BFS, and DFS algorithms.",
+      tags: ["Python", "Algorithms", "Graph Theory", "GUI"],
       demoUrl: "https://github.com/ari-yan7",
       githubUrl: "https://github.com/ari-yan7",
       featured: true,
       highlights: [
-        "Dynamic node-graph renderer",
-        "In-browser code parser & syntax highlighter",
-        "Exportable architecture diagrams"
+        "Real-time visual node search execution",
+        "Customizable graph obstacle grids",
+        "Algorithm complexity step comparison"
       ]
     }
   ],
@@ -117,15 +118,15 @@ const PORTFOLIO_DATA = {
       period: "2023 - Present",
       role: "B.Sc. in Computer Science & Engineering",
       organization: "BRAC University",
-      description: "Studying Data Structures, Algorithms, Software Engineering, Database Systems, Web Technologies, and Artificial Intelligence.",
+      description: "Studying Object-Oriented Programming (Java/Python), Data Structures, Algorithms, Database Management Systems, System Design, and Web Technologies.",
       highlights: ["Dean's List Candidate", "Active Member of Computer Club / Programming Club"]
     },
     {
       period: "2024",
-      role: "Frontend Developer Intern / Contributor",
-      organization: "Tech Innovation Lab",
-      description: "Developed responsive web components, optimized web application performance, and collaborated on modern UI/UX design implementations.",
-      highlights: ["Built 10+ reusable UI components", "Improved page load speed by 35%"]
+      role: "Software Engineering & Academic Projects",
+      organization: "BRAC University Coursework & Independent Dev",
+      description: "Designed OOP software applications, relational database schemas, and Python automation scripts for academic and personal projects.",
+      highlights: ["Implemented 10+ core algorithm projects", "Maintained 90%+ test coverage in Java/Python projects"]
     }
   ]
 };

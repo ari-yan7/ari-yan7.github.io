@@ -34,12 +34,7 @@ const PORTFOLIO_DATA = {
     description: "Computer Science student at BRAC University bridging technology, business strategy, leadership, and machine vision AI."
   },
 
-  stats: [
-    { label: "BRACU CGPA", value: "3.3 / 4.0" },
-    { label: "Campus Sign-Ups Led", value: "200+" },
-    { label: "Event Stalls Managed", value: "50+" },
-    { label: "Admission Success Rate", value: "80%" }
-  ],
+  stats: [],
 
   education: [
     {

@@ -5,15 +5,15 @@
 
 const PORTFOLIO_DATA = {
   personal: {
-    name: "Ariyan Rahman", // Replace with your full name
-    headline: "Full Stack Developer & AI Enthusiast",
+    name: "Ariyan Rahman", // Your name
+    headline: "Full Stack Developer & Computer Science Student",
     bio: "Computer Science & Engineering student at BRAC University. Passionate about crafting high-performance web applications, intelligent systems, and visually engaging digital experiences.",
     location: "Dhaka, Bangladesh",
-    email: "ariyan.rahman@example.com", // Replace with your real email
-    github: "https://github.com/", // Replace with your GitHub URL (e.g., https://github.com/yourusername)
-    linkedin: "https://linkedin.com/in/", // Replace with your LinkedIn URL
+    email: "ariyan.rahman@example.com", // Replace with your real email address
+    github: "https://github.com/ari-yan7", // Your GitHub profile
+    linkedin: "https://linkedin.com/in/ariyan-rahman", // Replace with your LinkedIn URL
     twitter: "https://x.com/",
-    resumeUrl: "#", // Add link to your PDF resume or Google Drive resume link
+    resumeUrl: "#", // Replace with link to your PDF resume or Google Drive link
     availability: "Available for Internships & Projects"
   },
 
@@ -26,7 +26,7 @@ const PORTFOLIO_DATA = {
       "Full-Stack Web Developer",
       "BRAC University CSE Student",
       "UI/UX & Frontend Designer",
-      "Machine Learning Explorer"
+      "Software Engineering Explorer"
     ],
     description: "Building modern web applications, scalable backends, and beautiful user interfaces with clean architecture."
   },
@@ -69,8 +69,8 @@ const PORTFOLIO_DATA = {
       image: "assets/images/project1.jpg",
       description: "An AI-powered data visualization and predictive dashboard with real-time model accuracy metrics and glassmorphic UI.",
       tags: ["React", "Node.js", "Python", "Chart.js"],
-      demoUrl: "https://example.com/demo",
-      githubUrl: "https://github.com/yourusername/synapse-ai",
+      demoUrl: "https://github.com/ari-yan7",
+      githubUrl: "https://github.com/ari-yan7",
       featured: true,
       highlights: [
         "Interactive real-time data charts",
@@ -85,8 +85,8 @@ const PORTFOLIO_DATA = {
       image: "assets/images/project2.jpg",
       description: "Mobile-first smart home ecosystem controller allowing real-time device tracking, routine creation, and energy analytics.",
       tags: ["JavaScript", "WebSockets", "CSS3", "PWA"],
-      demoUrl: "https://example.com/demo2",
-      githubUrl: "https://github.com/yourusername/smart-home-hub",
+      demoUrl: "https://github.com/ari-yan7",
+      githubUrl: "https://github.com/ari-yan7",
       featured: true,
       highlights: [
         "Real-time WebSocket telemetry updates",
@@ -101,8 +101,8 @@ const PORTFOLIO_DATA = {
       image: "assets/images/project3.jpg",
       description: "Interactive visual code explorer and dependency graph generator for JavaScript and Python repositories.",
       tags: ["JavaScript", "Canvas API", "Graph Theory", "Monaco Editor"],
-      demoUrl: "https://example.com/demo3",
-      githubUrl: "https://github.com/yourusername/codeverse-ide",
+      demoUrl: "https://github.com/ari-yan7",
+      githubUrl: "https://github.com/ari-yan7",
       featured: true,
       highlights: [
         "Dynamic node-graph renderer",

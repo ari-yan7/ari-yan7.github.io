@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal Portfolio of Ariyan Rahman - Full Stack Developer & CSE Student at BRAC University. Projects, Skills, and Experience.">
+  <meta name="keywords" content="Portfolio, Full Stack Developer, BRAC University, Web Development, JavaScript, React, Python, Software Engineer">
+  <meta name="author" content="Ariyan Rahman">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Ariyan Rahman | Portfolio Website">
+  <meta property="og:description" content="Explore my latest projects, tech stack, and software engineering experience.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/project1.jpg">
+
+  <title>Ariyan Rahman | Full Stack Developer & Computer Science Student</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Glow Effects -->
+  <div class="glow-orb glow-orb-1"></div>
+  <div class="glow-orb glow-orb-2"></div>
+  <canvas id="bg-canvas" style="position:fixed; top:0; left:0; pointer-events:none; z-index:0;"></canvas>
+
+  <!-- Header & Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="logo" id="logo">
+        <i class="fas fa-terminal"></i> <span id="logo-name">Ariyan</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge" id="hero-badge">
+            🚀 Welcome to my portfolio
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text" id="hero-title-name">Ariyan</span>.
+          </h1>
+          <div class="hero-typing-container">
+            I build &nbsp;<span class="hero-typing" id="hero-typing"></span>
+          </div>
+          <p class="hero-description" id="hero-desc">
+            Building modern web applications, scalable backends, and high-performance digital experiences with clean code.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fas fa-briefcase"></i> View My Work
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fas fa-paper-plane"></i> Get In Touch
+            </a>
+            <a href="#" class="btn btn-secondary" id="resume-btn" target="_blank" rel="noopener">
+              <i class="fas fa-file-download"></i> Resume
+            </a>
+          </div>
+
+          <div class="social-links">
+            <!-- Rendered dynamically by main.js -->
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="avatar-card">
+            <div class="avatar-img-wrapper">
+              <div class="avatar-img">
+                <i class="fas fa-user-astronaut"></i>
+              </div>
+            </div>
+            <h3 class="avatar-name" id="avatar-name">Ariyan Rahman</h3>
+            <p class="avatar-title" id="avatar-title">Full Stack Developer</p>
+            <div class="status-indicator">
+              <span class="status-dot"></span>
+              <span id="availability-text">Available for Projects</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Counter Section -->
+    <section class="stats-section" id="about">
+      <div class="container">
+        <div class="stats-grid" id="stats-grid">
+          <!-- Rendered dynamically by main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-layer-group"></i> Expertise</span>
+          <h2 class="section-title">Technical Tech Stack</h2>
+          <p class="section-subtitle">A comprehensive breakdown of tools, programming languages, and frameworks I use every day.</p>
+        </div>
+
+        <div class="skills-container" id="skills-container">
+          <!-- Rendered dynamically by main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-rocket"></i> Portfolio</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Here are some of the web apps, developer tools, and software solutions I have engineered.</p>
+        </div>
+
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="web">Web Apps</button>
+          <button class="filter-btn" data-filter="mobile">Mobile / PWA</button>
+          <button class="filter-btn" data-filter="tools">Developer Tools</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+          <!-- Rendered dynamically by main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-graduation-cap"></i> Journey</span>
+          <h2 class="section-title">Education & Experience</h2>
+          <p class="section-subtitle">My academic accomplishments and hands-on developer trajectory.</p>
+        </div>
+
+        <div class="timeline" id="timeline">
+          <!-- Rendered dynamically by main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-envelope"></i> Connect</span>
+          <h2 class="section-title">Let's Work Together</h2>
+          <p class="section-subtitle">Have a question, collaboration proposal, or project idea? Feel free to drop a message!</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-card">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-paper-plane"></i>
+              </div>
+              <div class="contact-detail">
+                <h4>Email Address</h4>
+                <p>
+                  <span id="contact-email">ariyan.rahman@example.com</span>
+                  <button class="copy-btn" onclick="copyEmail()" title="Copy Email"><i class="far fa-copy"></i></button>
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-detail">
+                <h4>Location</h4>
+                <p id="contact-location">Dhaka, Bangladesh</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-globe"></i>
+              </div>
+              <div class="contact-detail">
+                <h4>Social Profiles</h4>
+                <div class="social-links" style="margin-top:0.5rem;">
+                  <!-- Rendered dynamically -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-card">
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="form-name" class="form-label">Your Name</label>
+                <input type="text" id="form-name" class="form-input" placeholder="e.g. John Doe" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label">Your Email</label>
+                <input type="email" id="form-email" class="form-input" placeholder="e.g. john@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Your Message</label>
+                <textarea id="form-message" class="form-textarea" placeholder="Describe your inquiry or project details..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%;">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="year">2026</span> Ariyan Rahman. Built with HTML, CSS & JS. Ready for GitHub Pages hosting.</p>
+    </div>
+  </footer>
+
+  <!-- Project Detail Modal -->
+  <div class="modal-overlay" id="project-modal" onclick="if(event.target === this) closeProjectModal()">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeProjectModal()" aria-label="Close modal">
+        <i class="fas fa-times"></i>
+      </button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Configuration and Application Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

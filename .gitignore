@@ -1,0 +1,9 @@
+# OS / Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local Dev Logs
+*.log
+node_modules/

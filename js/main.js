@@ -1,18 +1,21 @@
 /* ==========================================================
-   PORTFOLIO INTERACTIVE LOGIC & DYNAMIC RENDERER
+   PORTFOLIO INTERACTIVE LOGIC & DYNAMIC CV RENDERER
    ========================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Ensure PORTFOLIO_DATA is available
   const data = typeof PORTFOLIO_DATA !== 'undefined' ? PORTFOLIO_DATA : null;
 
   initTheme();
   if (data) {
     renderPersonalInfo(data);
     renderStats(data.stats);
+    renderEducation(data.education);
+    renderWorkExperience(data.workExperience);
+    renderExtracurricular(data.extracurricular);
     renderSkills(data.skills);
+    renderHonors(data.honors);
     renderProjects(data.projects);
-    renderExperience(data.experience);
+    renderReferences(data.references);
     initTypingEffect(data.hero.typedRoles);
   }
 
@@ -54,11 +57,9 @@ function updateThemeIcon(theme) {
 function renderPersonalInfo(data) {
   const { personal, hero } = data;
 
-  // Header Logo
   const logoName = document.getElementById('logo-name');
   if (logoName) logoName.textContent = personal.name;
 
-  // Hero Section
   const heroBadge = document.getElementById('hero-badge');
   if (heroBadge) heroBadge.innerHTML = hero.badge;
 
@@ -66,9 +67,8 @@ function renderPersonalInfo(data) {
   if (heroTitleName) heroTitleName.textContent = personal.name;
 
   const heroDesc = document.getElementById('hero-desc');
-  if (heroDesc) heroDesc.textContent = hero.description;
+  if (heroDesc) heroDesc.textContent = personal.bio;
 
-  // Avatar Card
   const avatarName = document.getElementById('avatar-name');
   if (avatarName) avatarName.textContent = personal.name;
 
@@ -78,25 +78,27 @@ function renderPersonalInfo(data) {
   const availabilityText = document.getElementById('availability-text');
   if (availabilityText) availabilityText.textContent = personal.availability;
 
-  // Contact Info
+  // Contact Section Details
   const contactEmail = document.getElementById('contact-email');
   if (contactEmail) contactEmail.textContent = personal.email;
+
+  const contactPhone = document.getElementById('contact-phone');
+  if (contactPhone) contactPhone.textContent = personal.phone;
 
   const contactLocation = document.getElementById('contact-location');
   if (contactLocation) contactLocation.textContent = personal.location;
 
-  // Social Links
+  // Social Icons
   const socialContainers = document.querySelectorAll('.social-links');
   socialContainers.forEach(container => {
     container.innerHTML = `
       <a href="${personal.github}" target="_blank" rel="noopener" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
       <a href="${personal.linkedin}" target="_blank" rel="noopener" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      <a href="${personal.twitter}" target="_blank" rel="noopener" class="social-icon" title="Twitter/X"><i class="fab fa-x-twitter"></i></a>
       <a href="mailto:${personal.email}" class="social-icon" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="tel:${personal.phone}" class="social-icon" title="Phone"><i class="fas fa-phone-alt"></i></a>
     `;
   });
 
-  // Resume Link
   const resumeBtn = document.getElementById('resume-btn');
   if (resumeBtn && personal.resumeUrl) {
     resumeBtn.setAttribute('href', personal.resumeUrl);
@@ -111,9 +113,6 @@ function initTypingEffect(roles) {
   let roleIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
-  const typingSpeed = 100;
-  const deletingSpeed = 50;
-  const pauseEnd = 1800;
 
   function type() {
     const currentRole = roles[roleIndex];
@@ -125,15 +124,15 @@ function initTypingEffect(roles) {
       typingElement.textContent = currentRole.substring(0, charIndex);
     }
 
-    let delta = isDeleting ? deletingSpeed : typingSpeed;
+    let delta = isDeleting ? 40 : 80;
 
     if (!isDeleting && charIndex === currentRole.length) {
-      delta = pauseEnd;
+      delta = 1800;
       isDeleting = true;
     } else if (isDeleting && charIndex === 0) {
       isDeleting = false;
       roleIndex = (roleIndex + 1) % roles.length;
-      delta = 500;
+      delta = 400;
     }
 
     setTimeout(type, delta);
@@ -155,15 +154,76 @@ function renderStats(stats) {
   `).join('');
 }
 
+/* --- Render Education --- */
+function renderEducation(education) {
+  const container = document.getElementById('education-grid');
+  if (!container || !education) return;
+
+  container.innerHTML = education.map(edu => `
+    <div class="education-card">
+      <div class="edu-badge"><i class="fas fa-graduation-cap"></i> ${edu.period}</div>
+      <h3 class="edu-institution">${edu.institution}</h3>
+      <div class="edu-degree">${edu.degree}</div>
+      <div class="edu-result"><i class="fas fa-award"></i> ${edu.result}</div>
+      <div class="edu-location"><i class="fas fa-map-marker-alt"></i> ${edu.location}</div>
+      <p class="edu-details">${edu.details}</p>
+    </div>
+  `).join('');
+}
+
+/* --- Render Work Experience --- */
+function renderWorkExperience(experience) {
+  const container = document.getElementById('work-experience-list');
+  if (!container || !experience) return;
+
+  container.innerHTML = experience.map(work => `
+    <div class="experience-card">
+      <div class="exp-header">
+        <div>
+          <h3 class="exp-role">${work.role}</h3>
+          <h4 class="exp-company"><i class="fas fa-briefcase"></i> ${work.company}</h4>
+        </div>
+        <div class="exp-meta">
+          <span class="exp-period">${work.period}</span>
+          <span class="exp-location"><i class="fas fa-map-marker-alt"></i> ${work.location}</span>
+        </div>
+      </div>
+      <ul class="exp-bullets">
+        ${work.highlights.map(h => `<li><i class="fas fa-check-circle"></i> ${h}</li>`).join('')}
+      </ul>
+    </div>
+  `).join('');
+}
+
+/* --- Render Extracurricular & Leadership --- */
+function renderExtracurricular(activities) {
+  const container = document.getElementById('extracurricular-timeline');
+  if (!container || !activities) return;
+
+  container.innerHTML = activities.map(act => `
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <div class="timeline-period">${act.period}</div>
+        <h3 class="timeline-role">${act.role}</h3>
+        <div class="timeline-org"><i class="fas fa-users"></i> ${act.organization}</div>
+        <ul class="exp-bullets" style="margin-top:0.75rem;">
+          ${act.highlights.map(h => `<li><i class="fas fa-angle-right"></i> ${h}</li>`).join('')}
+        </ul>
+      </div>
+    </div>
+  `).join('');
+}
+
 /* --- Render Skills --- */
 function renderSkills(skills) {
   const skillsContainer = document.getElementById('skills-container');
   if (!skillsContainer || !skills) return;
 
   const categories = [
-    { title: "Languages", icon: "fas fa-code", items: skills.languages },
-    { title: "Frameworks & Tech", icon: "fas fa-layer-group", items: skills.frameworks },
-    { title: "Tools & Platforms", icon: "fas fa-wrench", items: skills.tools }
+    { title: "Technical & AI Languages", icon: "fas fa-code", items: skills.technical },
+    { title: "Software & Digital Tools", icon: "fas fa-desktop", items: skills.softwares },
+    { title: "Leadership & Management Skills", icon: "fas fa-tasks", items: skills.softSkills }
   ];
 
   skillsContainer.innerHTML = categories.map(cat => `
@@ -182,6 +242,29 @@ function renderSkills(skills) {
           </div>
         `).join('')}
       </div>
+    </div>
+  `).join('');
+
+  // Spoken languages tag render
+  const langContainer = document.getElementById('spoken-languages');
+  if (langContainer && skills.spokenLanguages) {
+    langContainer.innerHTML = skills.spokenLanguages.map(l => `
+      <span class="language-badge">${l.flag} ${l.name}</span>
+    `).join('');
+  }
+}
+
+/* --- Render Honors & Awards --- */
+function renderHonors(honors) {
+  const container = document.getElementById('honors-grid');
+  if (!container || !honors) return;
+
+  container.innerHTML = honors.map(h => `
+    <div class="honor-card">
+      <div class="honor-icon"><i class="${h.icon}"></i></div>
+      <div class="honor-year">${h.year}</div>
+      <h3 class="honor-title">${h.title}</h3>
+      <p class="honor-org">${h.organization}</p>
     </div>
   `).join('');
 }
@@ -207,7 +290,7 @@ function renderProjects(projects) {
             <i class="fas fa-info-circle"></i> Details
           </button>
           <a href="${p.githubUrl}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
-            <i class="fab fa-github"></i> Code
+            <i class="fab fa-github"></i> Repository
           </a>
         </div>
       </div>
@@ -215,8 +298,24 @@ function renderProjects(projects) {
   `).join('');
 }
 
+/* --- Render References --- */
+function renderReferences(references) {
+  const container = document.getElementById('references-grid');
+  if (!container || !references) return;
+
+  container.innerHTML = references.map(r => `
+    <div class="reference-card">
+      <div class="ref-icon"><i class="${r.icon}"></i></div>
+      <h3 class="ref-name">${r.name}</h3>
+      <div class="ref-title">${r.title}</div>
+      <div class="ref-org">${r.organization}</div>
+      <a href="mailto:${r.email}" class="ref-email"><i class="fas fa-envelope"></i> ${r.email}</a>
+    </div>
+  `).join('');
+}
+
 /* --- Project Filtering --- */
-function initProjectFilters(projects) {
+function initProjectFilters() {
   const filterBtns = document.querySelectorAll('.filter-btn');
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -229,7 +328,6 @@ function initProjectFilters(projects) {
       projectCards.forEach(card => {
         if (filter === 'all' || card.getAttribute('data-category') === filter) {
           card.style.display = 'flex';
-          card.style.animation = 'fadeIn 0.4s ease forwards';
         } else {
           card.style.display = 'none';
         }
@@ -238,7 +336,7 @@ function initProjectFilters(projects) {
   });
 }
 
-/* --- Open Project Modal --- */
+/* --- Project Modal --- */
 window.openProjectModal = function(id) {
   if (typeof PORTFOLIO_DATA === 'undefined') return;
   const project = PORTFOLIO_DATA.projects.find(p => p.id === id);
@@ -250,15 +348,15 @@ window.openProjectModal = function(id) {
   if (!modalOverlay || !modalBody) return;
 
   modalBody.innerHTML = `
-    <div style="margin-bottom: 1.5rem;">
-      <img src="${project.image}" alt="${project.title}" style="width:100%; height:250px; object-fit:cover; border-radius: 12px; margin-bottom: 1rem;">
-      <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem; font-weight:800;">${project.title}</h2>
+    <div>
+      <img src="${project.image}" alt="${project.title}" style="width:100%; height:240px; object-fit:cover; border-radius: 12px; margin-bottom: 1rem;">
+      <h2 style="font-size: 1.6rem; margin-bottom: 0.5rem; font-weight:800;">${project.title}</h2>
       <div style="display:flex; gap:0.5rem; margin-bottom: 1rem; flex-wrap:wrap;">
         ${project.tags.map(t => `<span class="tag">${t}</span>`).join('')}
       </div>
-      <p style="color: var(--text-muted); font-size:1.05rem; margin-bottom: 1.5rem;">${project.description}</p>
+      <p style="color: var(--text-muted); font-size:1rem; margin-bottom: 1.5rem;">${project.description}</p>
       
-      <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem;">Key Highlights:</h4>
+      <h4 style="font-size: 1.05rem; margin-bottom: 0.75rem;">Key Highlights:</h4>
       <ul style="list-style: none; margin-bottom: 1.5rem; padding-left:0;">
         ${(project.highlights || []).map(h => `
           <li style="display:flex; align-items:center; gap:0.5rem; color:var(--text-muted); margin-bottom:0.4rem;">
@@ -268,13 +366,8 @@ window.openProjectModal = function(id) {
       </ul>
 
       <div style="display:flex; gap:1rem;">
-        ${project.demoUrl ? `
-          <a href="${project.demoUrl}" target="_blank" rel="noopener" class="btn btn-primary">
-            <i class="fas fa-external-link-alt"></i> Live Demo
-          </a>
-        ` : ''}
-        <a href="${project.githubUrl}" target="_blank" rel="noopener" class="btn btn-secondary">
-          <i class="fab fa-github"></i> View Repository
+        <a href="${project.githubUrl}" target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fab fa-github"></i> View GitHub Repo
         </a>
       </div>
     </div>
@@ -283,33 +376,12 @@ window.openProjectModal = function(id) {
   modalOverlay.classList.add('active');
 };
 
-/* --- Close Project Modal --- */
 window.closeProjectModal = function() {
   const modalOverlay = document.getElementById('project-modal');
-  if (modalOverlay) {
-    modalOverlay.classList.remove('active');
-  }
+  if (modalOverlay) modalOverlay.classList.remove('active');
 };
 
-/* --- Render Experience & Education --- */
-function renderExperience(experience) {
-  const timelineContainer = document.getElementById('timeline');
-  if (!timelineContainer || !experience) return;
-
-  timelineContainer.innerHTML = experience.map(item => `
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-card">
-        <div class="timeline-period">${item.period}</div>
-        <h3 class="timeline-role">${item.role}</h3>
-        <div class="timeline-org">${item.organization}</div>
-        <p class="timeline-body">${item.description}</p>
-      </div>
-    </div>
-  `).join('');
-}
-
-/* --- Navbar & Mobile Drawer --- */
+/* --- Navbar & Mobile Menu --- */
 function initNavbar() {
   const navbar = document.getElementById('navbar');
   const mobileToggle = document.getElementById('mobile-toggle');
@@ -323,7 +395,6 @@ function initNavbar() {
       navbar.classList.remove('scrolled');
     }
 
-    // Scroll active link highlight
     let current = '';
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
@@ -353,14 +424,12 @@ function initNavbar() {
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('active');
-        const icon = mobileToggle.querySelector('i');
-        if (icon) icon.className = 'fas fa-bars';
       });
     });
   }
 }
 
-/* --- Contact Form & Toast Notifications --- */
+/* --- Contact Form & Toast --- */
 function initContactForm() {
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
@@ -376,15 +445,14 @@ function initContactForm() {
         return;
       }
 
-      // Simulate submission or mailto fallback
-      showToast("Message sent successfully! Thank you.", "success");
+      showToast("Thank you! Message sent successfully.", "success");
       contactForm.reset();
     });
   }
 }
 
 window.copyEmail = function() {
-  const email = PORTFOLIO_DATA ? PORTFOLIO_DATA.personal.email : 'ariyan.rahman@example.com';
+  const email = PORTFOLIO_DATA ? PORTFOLIO_DATA.personal.email : 'ariyanmubtasim@gmail.com';
   navigator.clipboard.writeText(email).then(() => {
     showToast("Email address copied to clipboard!", "success");
   }).catch(() => {
@@ -392,13 +460,13 @@ window.copyEmail = function() {
   });
 };
 
-function showToast(message, type = 'info') {
+function showToast(message) {
   const container = document.getElementById('toast-container');
   if (!container) return;
 
   const toast = document.createElement('div');
   toast.className = 'toast';
-  toast.innerHTML = `<i class="fas fa-info-circle"></i> ${message}`;
+  toast.innerHTML = `<i class="fas fa-check-circle"></i> ${message}`;
   
   container.appendChild(toast);
 
@@ -409,7 +477,7 @@ function showToast(message, type = 'info') {
   }, 3500);
 }
 
-/* --- Intersection Observer for Skill Bars & Animations --- */
+/* --- Intersection Observer --- */
 function initIntersectionObserver() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -428,7 +496,7 @@ function initIntersectionObserver() {
   if (skillsSection) observer.observe(skillsSection);
 }
 
-/* --- Subtle Interactive Background Canvas --- */
+/* --- Particle Canvas --- */
 function initBackgroundCanvas() {
   const canvas = document.getElementById('bg-canvas');
   if (!canvas) return;
@@ -445,13 +513,13 @@ function initBackgroundCanvas() {
   window.addEventListener('resize', resize);
   resize();
 
-  const particleCount = Math.floor(width / 25);
+  const particleCount = Math.floor(width / 30);
   for (let i = 0; i < particleCount; i++) {
     particles.push({
       x: Math.random() * width,
       y: Math.random() * height,
-      vx: (Math.random() - 0.5) * 0.4,
-      vy: (Math.random() - 0.5) * 0.4,
+      vx: (Math.random() - 0.5) * 0.3,
+      vy: (Math.random() - 0.5) * 0.3,
       size: Math.random() * 2 + 1
     });
   }
@@ -459,7 +527,7 @@ function initBackgroundCanvas() {
   function render() {
     ctx.clearRect(0, 0, width, height);
     const theme = document.documentElement.getAttribute('data-theme');
-    const color = theme === 'light' ? 'rgba(99, 102, 241, 0.12)' : 'rgba(255, 255, 255, 0.15)';
+    const color = theme === 'light' ? 'rgba(99, 102, 241, 0.1)' : 'rgba(255, 255, 255, 0.12)';
 
     ctx.fillStyle = color;
     particles.forEach(p => {

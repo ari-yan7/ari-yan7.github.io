@@ -1,132 +1,294 @@
 /* 
-  PORTFOLIO CONFIGURATION FILE
-  Edit this file to quickly update your portfolio content, personal info, projects, and skills.
+  PORTFOLIO CONFIGURATION FILE - Mubtasim Ariyan
+  Synchronized with official CV data
 */
 
 const PORTFOLIO_DATA = {
   personal: {
     name: "Mubtasim Ariyan",
-    headline: "Computer Science Student @ BRAC University & Software Developer",
-    bio: "Computer Science & Engineering student at BRAC University. Passionate about object-oriented design, algorithmic problem solving, Python, Java development, and building robust software solutions.",
+    headline: "Computer Science Undergraduate @ BRAC University",
+    subheadline: "Tech Enthusiast | Leadership & Stakeholder Management | AI & Machine Vision Learner",
+    bio: "Computer Science undergraduate at BRAC University combining technical expertise, business acumen, and leadership skills. Experienced in leading university initiatives, coordinating cross-functional teams, managing corporate partnerships, and applying tech solutions to real-world challenges.",
     location: "Dhaka, Bangladesh",
+    phone: "+8801863968787",
     email: "ariyanmubtasim@gmail.com",
     github: "https://github.com/ari-yan7",
     linkedin: "https://www.linkedin.com/in/mubtasimariyan",
     twitter: "https://x.com/ari_yan7",
-    resumeUrl: "#", // Add link to your PDF resume or Google Drive link
-    availability: "Available for Internships & Collaborations"
+    resumeUrl: "#", // Add link to your PDF resume if desired
+    availability: "Available for Internships & Projects"
   },
 
   hero: {
-    badge: "🎓 BRAC University CSE Student",
+    badge: "🎓 BRAC University CSE | B.Sc in Computer Science",
     titlePrefix: "Hi, I'm ",
     titleName: "Mubtasim Ariyan",
     titleSuffix: ".",
     typedRoles: [
-      "Computer Science Student @ BRAC University",
-      "Python & Java Developer",
-      "Software Engineering Explorer",
-      "Problem Solver & Tech Enthusiast"
+      "Computer Science Undergraduate @ BRACU",
+      "BIZ BEE Assistant Director",
+      "Java & Python Developer",
+      "AI & Machine Vision Learner @ BRACU DUBURI",
+      "Event Operations & Stakeholder Lead"
     ],
-    description: "Building reliable software applications, exploring object-oriented systems, and solving algorithmic problems with Python & Java."
+    description: "Computer Science student at BRAC University bridging technology, business strategy, leadership, and machine vision AI."
   },
 
   stats: [
-    { label: "Completed Projects", value: "10+" },
-    { label: "Languages Mastered", value: "5+" },
-    { label: "GitHub Commits", value: "300+" },
-    { label: "Years Coding", value: "2+" }
+    { label: "BRACU CGPA", value: "3.3 / 4.0" },
+    { label: "Campus Sign-Ups Led", value: "200+" },
+    { label: "Event Stalls Managed", value: "50+" },
+    { label: "Admission Success Rate", value: "80%" }
   ],
 
-  skills: {
-    languages: [
-      { name: "Python", icon: "fab fa-python", level: "90%" },
-      { name: "Java", icon: "fab fa-java", level: "88%" },
-      { name: "C++", icon: "fas fa-code", level: "80%" },
-      { name: "JavaScript / ES6+", icon: "fab fa-js-square", level: "82%" },
-      { name: "HTML5 & CSS3", icon: "fab fa-html5", level: "85%" },
-      { name: "SQL", icon: "fas fa-database", level: "78%" }
-    ],
-    frameworks: [
-      { name: "Django / FastAPI (Python)", icon: "fas fa-server", level: "82%" },
-      { name: "Spring Boot / Java Tech", icon: "fas fa-cubes", level: "75%" },
-      { name: "Node.js & Express", icon: "fab fa-node-js", level: "75%" },
-      { name: "React.js", icon: "fab fa-react", level: "75%" }
-    ],
-    tools: [
-      { name: "Git & GitHub", icon: "fab fa-github", level: "90%" },
-      { name: "VS Code & IntelliJ IDEA", icon: "fas fa-terminal", level: "92%" },
-      { name: "MySQL / PostgreSQL", icon: "fas fa-database", level: "80%" },
-      { name: "Postman / REST APIs", icon: "fas fa-paper-plane", level: "85%" },
-      { name: "Linux / Bash", icon: "fab fa-linux", level: "78%" }
-    ]
-  },
+  education: [
+    {
+      institution: "BRAC University",
+      degree: "Bachelor of Science in Computer Science",
+      result: "CGPA: 3.3 / 4.0",
+      period: "Jan 2024 - Dec 2028 (Expected)",
+      location: "Dhaka, Bangladesh",
+      details: "Studying Data Structures, Algorithms, Object-Oriented Design (Java/Python), Database Systems, System Analysis, and Computer Science Fundamentals."
+    },
+    {
+      institution: "Chittagong Cantonment Public College",
+      degree: "Higher Secondary Certificate (HSC)",
+      result: "GPA: 5.0 / 5.0",
+      period: "2020 - 2022",
+      location: "Chittagong, Bangladesh",
+      details: "Science Group. Excelled in Higher Mathematics, Physics, Chemistry, and ICT."
+    },
+    {
+      institution: "Nasirabad Government High School",
+      degree: "Secondary School Certificate (SSC)",
+      result: "GPA: 5.0 / 5.0",
+      period: "2015 - 2020",
+      location: "Chittagong, Bangladesh",
+      details: "Science Group. Strong foundation in Mathematics, Science, and Olympiad competitions."
+    }
+  ],
 
-  projects: [
+  workExperience: [
     {
-      id: "python-data-analytics",
-      title: "PyStream Analytics Engine",
-      category: "web",
-      image: "assets/images/project1.jpg",
-      description: "A Python-powered data processing & visualization dashboard built with FastAPI, Pandas, and interactive glassmorphic metrics.",
-      tags: ["Python", "FastAPI", "Pandas", "JavaScript"],
-      demoUrl: "https://github.com/ari-yan7",
-      githubUrl: "https://github.com/ari-yan7",
-      featured: true,
+      role: "Campus Ambassador",
+      company: "Foodi",
+      period: "Nov 2025 – May 2026",
+      location: "Dhaka, Bangladesh",
       highlights: [
-        "Data stream processing pipeline in Python",
-        "Automated statistical analytics generation",
-        "Clean REST API integration and dashboard UI"
+        "Led on-campus activation for Foodi, achieving 200+ app sign-ups in a single day through strategic student outreach and direct engagement.",
+        "Acted as a liaison between Foodi and the student community, collecting 50+ user feedback reports and promoting key features to improve app adoption.",
+        "Supported campus marketing initiatives by coordinating booth activities, managing peer ambassadors, and boosting brand presence during university events."
       ]
     },
     {
-      id: "java-omnitask-system",
-      title: "OmniTask Management System",
-      category: "tools",
-      image: "assets/images/project2.jpg",
-      description: "Object-oriented task & resource management application developed using Java, OOP design patterns, and SQL relational database.",
-      tags: ["Java", "OOP", "MySQL", "GUI"],
-      demoUrl: "https://github.com/ari-yan7",
-      githubUrl: "https://github.com/ari-yan7",
-      featured: true,
+      role: "Mathematics Instructor",
+      company: "QED Private University Admission Care",
+      period: "Mar 2025 – Sep 2025",
+      location: "Dhaka, Bangladesh",
       highlights: [
-        "Clean Object-Oriented architecture & SOLID principles",
-        "Relational database CRUD operations",
-        "User authentication and role management"
-      ]
-    },
-    {
-      id: "algorithm-visualizer",
-      title: "Graph Algorithm Visualizer",
-      category: "tools",
-      image: "assets/images/project3.jpg",
-      description: "Interactive pathfinding & graph search algorithm visualizer implementing Dijkstra's, A*, BFS, and DFS algorithms.",
-      tags: ["Python", "Algorithms", "Graph Theory", "GUI"],
-      demoUrl: "https://github.com/ari-yan7",
-      githubUrl: "https://github.com/ari-yan7",
-      featured: true,
-      highlights: [
-        "Real-time visual node search execution",
-        "Customizable graph obstacle grids",
-        "Algorithm complexity step comparison"
+        "Taught Mathematics to 4 batches (approx. 40 students) in a 'Sure Success' competitive university admission program.",
+        "Delivered an 80% success rate, with students successfully admitted to BRACU, NSU, and EWU."
       ]
     }
   ],
 
-  experience: [
+  extracurricular: [
     {
-      period: "2023 - Present",
-      role: "B.Sc. in Computer Science & Engineering",
-      organization: "BRAC University",
-      description: "Studying Object-Oriented Programming (Java/Python), Data Structures, Algorithms, Database Management Systems, System Design, and Web Technologies.",
-      highlights: ["Dean's List Candidate", "Active Member of Computer Club / Programming Club"]
+      role: "Assistant Director",
+      organization: "BRAC University Business Club - BIZ BEE",
+      period: "Jul 2024 – Present",
+      location: "Dhaka, Bangladesh",
+      highlights: [
+        "Managed corporate partnerships and sponsor relations across major BIZ BEE initiatives with organizations like Bashundhara Group, X Ceramics, Fantasy Kingdom, and Mach Shamachar.",
+        "Led planning & execution of high-impact workshops, corporate sessions, competitions, and the Cox’s Bazar Long Tour.",
+        "Contributed to national-level competitions like ADWIZ 2.0 and HSBC Business Case Competition 2026, handling industry judges and backstage operations.",
+        "Earned a double promotion in recognition of leadership, performance, and organizational impact."
+      ]
     },
     {
-      period: "2024",
-      role: "Software Engineering & Academic Projects",
-      organization: "BRAC University Coursework & Independent Dev",
-      description: "Designed OOP software applications, relational database schemas, and Python automation scripts for academic and personal projects.",
-      highlights: ["Implemented 10+ core algorithm projects", "Maintained 90%+ test coverage in Java/Python projects"]
+      role: "Associate Member - Outreach & AI-Machine Vision Dept",
+      organization: "BRACU DUBURI",
+      period: "Mar 2025 – Present",
+      location: "Dhaka, Bangladesh",
+      highlights: [
+        "Developing skills in Machine Vision AI using Pandas, TensorFlow, and OpenCV for autonomous underwater vehicle operations.",
+        "Led outreach initiatives by approaching 10+ corporate entities and securing multiple partnerships/sponsorships for BRACU Duburi."
+      ]
+    },
+    {
+      role: "Executive (Awarded Best Executive)",
+      organization: "BRAC University Entrepreneurship Development Forum (BUEDF)",
+      period: "Feb 2024 – Jan 2025",
+      location: "Dhaka, Bangladesh",
+      highlights: [
+        "Organized Entrepreneur’s Fest 3.0 & 4.0 and BUEDF Eid Bazaar at BRAC University, managing 50+ stalls.",
+        "Coordinated Entrepreneur’s Talk 2.0 with 5 guest speakers and secured 5 sponsors and media collaborations.",
+        "Awarded 'Best Executive' at Entrepreneur’s Fest 3.0 (Design & IT Support) and Entrepreneur’s Fest 4.0 (Sponsorship & Partner Management)."
+      ]
+    },
+    {
+      role: "Apprentice",
+      organization: "Robotics Club of BRAC University (ROBU)",
+      period: "Feb 2024 – Present",
+      location: "Dhaka, Bangladesh",
+      highlights: [
+        "Completed Basics of Robotics workshop, gaining hands-on experience with Arduino microcontrollers and sensors.",
+        "Supported TRACTION national robotics competition logistics, food services, and event operations."
+      ]
+    }
+  ],
+
+  skills: {
+    technical: [
+      { name: "Java (Intermediate)", icon: "fab fa-java", level: "85%" },
+      { name: "Python (Beginner/Intermediate)", icon: "fab fa-python", level: "80%" },
+      { name: "Machine Vision AI (Pandas, TensorFlow, OpenCV)", icon: "fas fa-eye", level: "75%" },
+      { name: "LaTeX (Beginner)", icon: "fas fa-file-code", level: "70%" },
+      { name: "Arduino & Robotics Sensors", icon: "fas fa-microchip", level: "75%" },
+      { name: "Git & GitHub", icon: "fab fa-github", level: "85%" }
+    ],
+    softwares: [
+      { name: "MS Office Suite (Word, Excel, PowerPoint)", icon: "fas fa-file-excel", level: "95%" },
+      { name: "Canva & Graphics Design", icon: "fas fa-palette", level: "90%" },
+      { name: "Google Workspace Tools", icon: "fab fa-google", level: "95%" },
+      { name: "VS Code & Development Tools", icon: "fas fa-terminal", level: "90%" }
+    ],
+    softSkills: [
+      { name: "Leadership & Team Management", icon: "fas fa-users-cog", level: "95%" },
+      { name: "Corporate Partnerships & Stakeholder Relations", icon: "fas fa-handshake", level: "92%" },
+      { name: "Professional Communication & Outreach", icon: "fas fa-bullhorn", level: "95%" },
+      { name: "Event Logistics & Operation Management", icon: "fas fa-tasks", level: "90%" },
+      { name: "Adaptability & Working Under Pressure", icon: "fas fa-bolt", level: "95%" }
+    ],
+    spokenLanguages: [
+      { name: "Bengali (Native)", flag: "🇧🇩" },
+      { name: "English (Professional)", flag: "🇬🇧" },
+      { name: "Hindi (Conversational)", flag: "🇮🇳" }
+    ]
+  },
+
+  honors: [
+    {
+      year: "2025",
+      title: "BRONZE MEDAL",
+      organization: "The Duke Of Edinburgh’s International Award",
+      icon: "fas fa-award"
+    },
+    {
+      year: "2025",
+      title: "Best Executive",
+      organization: "Entrepreneurs Fest 4.0 by BUEDF",
+      icon: "fas fa-trophy"
+    },
+    {
+      year: "2025",
+      title: "Volunteer",
+      organization: "17th Convocation of BRAC University",
+      icon: "fas fa-user-shield"
+    },
+    {
+      year: "2024",
+      title: "Best Executive",
+      organization: "EID BAZAAR by BUEDF",
+      icon: "fas fa-trophy"
+    },
+    {
+      year: "2024",
+      title: "Student Volunteer",
+      organization: "BRAC University Career Fair 2024",
+      icon: "fas fa-hands-helping"
+    },
+    {
+      year: "2024",
+      title: "Volunteer",
+      organization: "Women Entrepreneurs’ Expo 2024 by CED-BRAC University",
+      icon: "fas fa-heart"
+    },
+    {
+      year: "2019",
+      title: "Contestant",
+      organization: "Ispahani Mirzapore Banglabid",
+      icon: "fas fa-bookmark"
+    },
+    {
+      year: "2019",
+      title: "Contestant",
+      organization: "5th Bangladesh Junior Science Olympiad",
+      icon: "fas fa-flask"
+    },
+    {
+      year: "2019",
+      title: "Contestant",
+      organization: "9th Bangladesh Junior Physics Olympiad",
+      icon: "fas fa-atom"
+    }
+  ],
+
+  projects: [
+    {
+      id: "machine-vision-duburi",
+      title: "Autonomous Underwater Machine Vision AI",
+      category: "ai",
+      image: "assets/images/project1.jpg",
+      description: "Machine vision computer vision pipeline built with Python, Pandas, OpenCV, and TensorFlow for BRACU DUBURI autonomous vehicle recognition.",
+      tags: ["Python", "OpenCV", "TensorFlow", "Pandas"],
+      demoUrl: "https://github.com/ari-yan7",
+      githubUrl: "https://github.com/ari-yan7",
+      featured: true,
+      highlights: [
+        "Object recognition for underwater autonomous vehicles",
+        "Image preprocessing & edge detection algorithms",
+        "Integration with team outreach & technical pipeline"
+      ]
+    },
+    {
+      id: "buedf-event-it",
+      title: "BUEDF Festival IT & Operations Suite",
+      category: "web",
+      image: "assets/images/project2.jpg",
+      description: "Digital operation, stall allocation, and IT management setup for Entrepreneurs Fest 3.0 & 4.0 managing 50+ stalls.",
+      tags: ["Java", "MS Workspace", "Event Ops", "Canva"],
+      demoUrl: "https://github.com/ari-yan7",
+      githubUrl: "https://github.com/ari-yan7",
+      featured: true,
+      highlights: [
+        "Managed stall workflow for 50+ entrepreneurs",
+        "Earned Best Executive Award for IT & Design support",
+        "Coordinated guest speaker logistics & media coverage"
+      ]
+    },
+    {
+      id: "robotics-traction",
+      title: "Robotics TRACTION & Sensor Controller",
+      category: "robotics",
+      image: "assets/images/project3.jpg",
+      description: "Microcontroller circuit design and sensor data processing using Arduino microcontrollers and robotics modules.",
+      tags: ["Arduino", "Sensors", "Robotics", "C++"],
+      demoUrl: "https://github.com/ari-yan7",
+      githubUrl: "https://github.com/ari-yan7",
+      featured: true,
+      highlights: [
+        "Hands-on robotics hardware prototyping",
+        "Contributed to TRACTION national robotics competition",
+        "Sensor input processing & hardware integration"
+      ]
+    }
+  ],
+
+  references: [
+    {
+      name: "Maymuna Rahman",
+      title: "HR Associate",
+      organization: "Coca-Cola CCI",
+      email: "maymuna.rahman@cci.com.bd",
+      icon: "fas fa-building"
+    },
+    {
+      name: "Md. Saiful Islam",
+      title: "Senior Lecturer",
+      organization: "Department of Computer Science and Engineering, BRAC University",
+      email: "md.saiful.islam@bracu.ac.bd",
+      icon: "fas fa-university"
     }
   ]
 };

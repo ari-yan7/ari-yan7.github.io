@@ -9,9 +9,9 @@ const PORTFOLIO_DATA = {
     headline: "Computer Science Student @ BRAC University & Software Developer",
     bio: "Computer Science & Engineering student at BRAC University. Passionate about object-oriented design, algorithmic problem solving, Python, Java development, and building robust software solutions.",
     location: "Dhaka, Bangladesh",
-    email: "mubtasim.ariyan@example.com", // Replace with your real email address
+    email: "ariyanmubtasim@gmail.com",
     github: "https://github.com/ari-yan7",
-    linkedin: "https://linkedin.com/in/mubtasim-ariyan", // Replace with your LinkedIn profile URL
+    linkedin: "https://www.linkedin.com/in/mubtasimariyan",
     twitter: "https://x.com/ari_yan7",
     resumeUrl: "#", // Add link to your PDF resume or Google Drive link
     availability: "Available for Internships & Collaborations"

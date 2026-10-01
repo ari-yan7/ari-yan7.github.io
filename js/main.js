@@ -201,7 +201,6 @@ function renderEducation(education) {
       <div class="edu-degree">${edu.degree}</div>
       <div class="edu-result"><i class="fas fa-award"></i> ${edu.result}</div>
       <div class="edu-location"><i class="fas fa-map-marker-alt"></i> ${edu.location}</div>
-      <p class="edu-details">${edu.details}</p>
     </div>
   `).join('');
 }

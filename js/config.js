@@ -18,7 +18,7 @@ const PORTFOLIO_DATA = {
     twitter: "https://x.com/ari_yan7",
     facebook: "https://www.facebook.com/share/1DhMAP9stk/",
     instagram: "https://www.instagram.com/ari.yan_07",
-    resumeUrl: "#", // Add link to your PDF resume if desired
+    resumeUrl: "assets/Mubtasim_Ariyan_CV.pdf",
     availability: "Available for Internships & Projects"
   },
 
@@ -30,8 +30,7 @@ const PORTFOLIO_DATA = {
     typedRoles: [
       "Computer Science Undergraduate @ BRACU",
       "BIZ BEE Assistant Director",
-      "Java & Python Developer",
-      "AI & Machine Vision Learner @ BRACU DUBURI",
+      "Java & Python Learner",
       "Event Operations & Stakeholder Lead"
     ],
     description: "Computer Science student at BRAC University bridging technology, business strategy, leadership, and machine vision AI."
@@ -106,7 +105,7 @@ const PORTFOLIO_DATA = {
     {
       role: "Associate Member - Outreach & AI-Machine Vision Dept",
       organization: "BRACU DUBURI",
-      period: "Mar 2025 – Present",
+      period: "Mar 2025 – Jun 2026",
       location: "Dhaka, Bangladesh",
       highlights: [
         "Developing skills in Machine Vision AI using Pandas, TensorFlow, and OpenCV for autonomous underwater vehicle operations.",
@@ -127,7 +126,7 @@ const PORTFOLIO_DATA = {
     {
       role: "Apprentice",
       organization: "Robotics Club of BRAC University (ROBU)",
-      period: "Feb 2024 – Present",
+      period: "Feb 2024 – Dec 2025",
       location: "Dhaka, Bangladesh",
       highlights: [
         "Completed Basics of Robotics workshop, gaining hands-on experience with Arduino microcontrollers and sensors.",
@@ -138,11 +137,9 @@ const PORTFOLIO_DATA = {
 
   skills: {
     technical: [
-      { name: "Java (Intermediate)", icon: "fab fa-java", level: "85%" },
-      { name: "Python (Beginner/Intermediate)", icon: "fab fa-python", level: "80%" },
-      { name: "Machine Vision AI (Pandas, TensorFlow, OpenCV)", icon: "fas fa-eye", level: "75%" },
-      { name: "LaTeX (Beginner)", icon: "fas fa-file-code", level: "70%" },
-      { name: "Arduino & Robotics Sensors", icon: "fas fa-microchip", level: "75%" },
+      { name: "Java", icon: "fab fa-java", level: "85%" },
+      { name: "Python", icon: "fab fa-python", level: "80%" },
+      { name: "LaTeX", icon: "fas fa-file-code", level: "70%" },
       { name: "Git & GitHub", icon: "fab fa-github", level: "85%" }
     ],
     softwares: [

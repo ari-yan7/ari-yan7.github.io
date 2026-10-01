@@ -16,7 +16,7 @@ const PORTFOLIO_DATA = {
     github: "https://github.com/ari-yan7",
     linkedin: "https://www.linkedin.com/in/mubtasimariyan",
     twitter: "https://x.com/ari_yan7",
-    facebook: "https://www.facebook.com/share/1DhMAP9stk/",
+    facebook: "https://www.facebook.com/mubtasimariyan7",
     instagram: "https://www.instagram.com/ari.yan_07",
     resumeUrl: "assets/Mubtasim_Ariyan_CV.pdf",
     availability: "Available for Internships & Projects"

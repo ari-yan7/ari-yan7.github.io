@@ -1723,7 +1723,9 @@ body {
   }
 
   .logo {
+    flex: 1 1 auto;
     min-width: 0;
+    max-width: calc(100% - 88px);
     font-size: 1.15rem;
   }
 
@@ -1736,6 +1738,12 @@ body {
   .nav-actions {
     gap: 0.5rem;
     flex-shrink: 0;
+    margin-left: auto;
+  }
+
+  .nav-container {
+    width: 100%;
+    gap: 0.5rem;
   }
 
   .theme-toggle {

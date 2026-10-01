@@ -444,6 +444,26 @@ function initNavbar() {
         navMenu.classList.remove('active');
       });
     });
+
+    document.addEventListener('pointerdown', (event) => {
+      if (
+        navMenu.classList.contains('active') &&
+        !navMenu.contains(event.target) &&
+        !mobileToggle.contains(event.target)
+      ) {
+        navMenu.classList.remove('active');
+        const icon = mobileToggle.querySelector('i');
+        if (icon) icon.className = 'fas fa-bars';
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        const icon = mobileToggle.querySelector('i');
+        if (icon) icon.className = 'fas fa-bars';
+      }
+    });
   }
 }
 

@@ -125,10 +125,10 @@ function renderSharedElements(data) {
   const socialContainers = document.querySelectorAll('.social-links');
   socialContainers.forEach(container => {
     container.innerHTML = `
-      <a href="${personal.github}" target="_blank" rel="noopener" class="social-icon" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i><span class="social-label">GitHub</span></a>
-      <a href="${personal.linkedin}" target="_blank" rel="noopener" class="social-icon" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i><span class="social-label">LinkedIn</span></a>
-      <a href="${personal.facebook}" target="_blank" rel="noopener" class="social-icon" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i><span class="social-label">Facebook</span></a>
-      <a href="${personal.instagram}" target="_blank" rel="noopener" class="social-icon" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i><span class="social-label">Instagram</span></a>
+      <a href="${personal.github}" target="_blank" rel="noopener" class="social-icon social-github" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i><span class="social-label">GitHub</span></a>
+      <a href="${personal.linkedin}" target="_blank" rel="noopener" class="social-icon social-linkedin" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i><span class="social-label">LinkedIn</span></a>
+      <a href="${personal.facebook}" target="_blank" rel="noopener" class="social-icon social-facebook" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i><span class="social-label">Facebook</span></a>
+      <a href="${personal.instagram}" target="_blank" rel="noopener" class="social-icon social-instagram" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i><span class="social-label">Instagram</span></a>
     `;
   });
 

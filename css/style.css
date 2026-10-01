@@ -1272,8 +1272,18 @@ body {
 }
 
 .contact-social-column .social-links {
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
   margin: 0;
+}
+
+.contact-social-column .social-icon {
+  width: 54px;
+  height: 54px;
+  justify-self: start;
+  border-radius: var(--radius-md);
+  font-size: 1.1rem;
 }
 
 .contact-item {
@@ -1323,18 +1333,6 @@ body {
   border-radius: var(--radius-md);
   padding: 2.5rem;
   backdrop-filter: blur(16px);
-}
-
-.contact-card-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 2rem;
-}
-
-.contact-card-actions .btn {
-  flex: 1 1 160px;
-  justify-content: center;
 }
 
 .contact-brief-card {

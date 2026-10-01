@@ -129,8 +129,6 @@ function renderSharedElements(data) {
       <a href="${personal.linkedin}" target="_blank" rel="noopener" class="social-icon" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i><span class="social-label">LinkedIn</span></a>
       <a href="${personal.facebook}" target="_blank" rel="noopener" class="social-icon" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i><span class="social-label">Facebook</span></a>
       <a href="${personal.instagram}" target="_blank" rel="noopener" class="social-icon" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i><span class="social-label">Instagram</span></a>
-      <a href="mailto:${personal.email}" class="social-icon" title="Email" aria-label="Email"><i class="fas fa-envelope"></i><span class="social-label">Email</span></a>
-      <a href="tel:${personal.phone}" class="social-icon" title="Phone" aria-label="Phone"><i class="fas fa-phone-alt"></i><span class="social-label">Phone</span></a>
     `;
   });
 

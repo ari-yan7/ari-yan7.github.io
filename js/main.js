@@ -478,6 +478,15 @@ window.copyEmail = function() {
   });
 };
 
+window.copyPhone = function() {
+  const phone = PORTFOLIO_DATA ? PORTFOLIO_DATA.personal.phone : '+8801863968787';
+  navigator.clipboard.writeText(phone).then(() => {
+    showToast("Phone number copied to clipboard!", "success");
+  }).catch(() => {
+    showToast("Phone: " + phone, "info");
+  });
+};
+
 function showToast(message) {
   const container = document.getElementById('toast-container');
   if (!container) return;

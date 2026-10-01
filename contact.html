@@ -116,7 +116,16 @@
                     </div>
                     <div class="contact-detail">
                       <h4>Phone Number</h4>
-                      <p id="contact-phone">+8801863968787</p>
+                      <p>
+                        <span id="contact-phone">+8801863968787</span>
+                        <button
+                          class="copy-btn"
+                          onclick="copyPhone()"
+                          title="Copy Phone Number"
+                        >
+                          <i class="far fa-copy"></i>
+                        </button>
+                      </p>
                     </div>
                   </div>
 
@@ -156,6 +165,6 @@
     <div class="toast-container" id="toast-container"></div>
 
     <script src="js/config.js?v=5"></script>
-    <script src="js/main.js?v=5"></script>
+    <script src="js/main.js?v=6"></script>
   </body>
 </html>

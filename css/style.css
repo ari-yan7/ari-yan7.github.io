@@ -1268,7 +1268,7 @@ body {
 .contact-social-column > h4 {
   margin-bottom: 1rem;
   color: var(--text-muted);
-  font-size: 0.85rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-align: center;
 }
@@ -1297,7 +1297,7 @@ body {
 
 .contact-social-column .social-label {
   display: inline;
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 600;
 }
 

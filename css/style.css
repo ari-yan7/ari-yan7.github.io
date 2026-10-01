@@ -1332,12 +1332,28 @@ body {
 }
 
 .copy-btn {
-  background: none;
-  border: none;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
   color: var(--accent-primary);
   cursor: pointer;
-  margin-left: 0.5rem;
+  margin-left: 0.6rem;
   font-size: 0.9rem;
+  vertical-align: middle;
+  transition: var(--transition);
+}
+
+.copy-btn:hover {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: #fff;
+  transform: translateY(-1px);
 }
 
 .contact-form-card {

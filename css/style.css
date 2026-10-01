@@ -1269,6 +1269,8 @@ body {
   margin-bottom: 1rem;
   color: var(--text-muted);
   font-size: 0.85rem;
+  font-weight: 700;
+  text-align: center;
 }
 
 .contact-social-column .social-links {

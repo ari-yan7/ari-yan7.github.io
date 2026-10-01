@@ -1196,19 +1196,9 @@ body {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
-  padding: clamp(1.5rem, 4vw, 3rem);
+  padding: clamp(2rem, 5vw, 4rem);
   backdrop-filter: blur(16px);
   box-shadow: var(--shadow-lg);
-}
-
-.contact-info-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--gradient-main);
 }
 
 .contact-card-heading {
@@ -1216,8 +1206,7 @@ body {
   align-items: flex-start;
   justify-content: space-between;
   gap: 1.5rem;
-  padding-bottom: 1.25rem;
-  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
 }
 
 .contact-card-kicker {
@@ -1263,19 +1252,17 @@ body {
 .contact-details-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(220px, 0.75fr);
-  gap: 2rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--border-color);
+  gap: clamp(3rem, 7vw, 6rem);
+  padding: 1.5rem 0 1rem;
 }
 
 .contact-details-column {
   display: grid;
-  gap: 1.25rem;
+  gap: 1.75rem;
 }
 
 .contact-social-column {
-  padding-left: 2rem;
-  border-left: 1px solid var(--border-color);
+  padding: 0.25rem 0;
 }
 
 .contact-social-column > h4 {
@@ -1292,14 +1279,14 @@ body {
 .contact-item {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1.5rem;
   min-width: 0;
   margin-bottom: 0;
 }
 
 .contact-icon {
-  width: 50px;
-  height: 50px;
+  width: 58px;
+  height: 58px;
   border-radius: var(--radius-md);
   background: var(--gradient-subtle);
   color: var(--accent-primary);
@@ -1342,7 +1329,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 
 .contact-card-actions .btn {
@@ -1655,10 +1642,7 @@ body {
     grid-template-columns: 1fr;
   }
   .contact-social-column {
-    padding-left: 0;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--border-color);
-    border-left: 0;
+    padding-top: 1rem;
   }
   .contact-detail p {
     overflow-wrap: anywhere;

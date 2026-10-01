@@ -1,132 +1,170 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal Portfolio of Mubtasim Ariyan - Computer Science Undergraduate at BRAC University.">
-  <meta name="author" content="Mubtasim Ariyan">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Personal Portfolio of Mubtasim Ariyan - Computer Science Undergraduate at BRAC University."
+    />
+    <meta name="author" content="Mubtasim Ariyan" />
 
-  <!-- Open Graph / Social Sharing -->
-  <meta property="og:title" content="Mubtasim Ariyan | Portfolio Website">
-  <meta property="og:description" content="Computer Science Undergraduate @ BRAC University. Leadership, Technology, and Innovation.">
-  <meta property="og:type" content="website">
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Mubtasim Ariyan | Portfolio Website" />
+    <meta
+      property="og:description"
+      content="Computer Science Undergraduate @ BRAC University. Leadership, Technology, and Innovation."
+    />
+    <meta property="og:type" content="website" />
 
-  <title>Mubtasim Ariyan | Home</title>
+    <title>Mubtasim Ariyan | Home</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- FontAwesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+    <!-- FontAwesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+    />
 
-  <link rel="stylesheet" href="css/style.css?v=4">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css?v=4" />
+  </head>
+  <body>
+    <!-- Ambient Glow Effects -->
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <canvas
+      id="bg-canvas"
+      style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 0"
+    ></canvas>
 
-  <!-- Ambient Glow Effects -->
-  <div class="glow-orb glow-orb-1"></div>
-  <div class="glow-orb glow-orb-2"></div>
-  <canvas id="bg-canvas" style="position:fixed; top:0; left:0; pointer-events:none; z-index:0;"></canvas>
+    <!-- Navigation Bar -->
+    <header class="navbar" id="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="logo" id="logo">
+          <i class="fas fa-terminal"></i>
+          <span id="logo-name">Mubtasim Ariyan</span>
+        </a>
 
-  <!-- Navigation Bar -->
-  <header class="navbar" id="navbar">
-    <div class="container nav-container">
-      <a href="index.html" class="logo" id="logo">
-        <i class="fas fa-terminal"></i> <span id="logo-name">Mubtasim Ariyan</span>
-      </a>
+        <nav>
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html" class="nav-link active">Home</a></li>
+            <li><a href="education.html" class="nav-link">Education</a></li>
+            <li><a href="experience.html" class="nav-link">Experience</a></li>
+            <li><a href="leadership.html" class="nav-link">Leadership</a></li>
+            <li><a href="skills.html" class="nav-link">Skills</a></li>
+            <li><a href="honors.html" class="nav-link">Honors</a></li>
 
-      <nav>
-        <ul class="nav-menu" id="nav-menu">
-          <li><a href="index.html" class="nav-link active">Home</a></li>
-          <li><a href="education.html" class="nav-link">Education</a></li>
-          <li><a href="experience.html" class="nav-link">Experience</a></li>
-          <li><a href="leadership.html" class="nav-link">Leadership</a></li>
-          <li><a href="skills.html" class="nav-link">Skills</a></li>
-          <li><a href="honors.html" class="nav-link">Honors</a></li>
-          
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
 
-      <div class="nav-actions">
-        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
-          <i class="fas fa-sun"></i>
-        </button>
-        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="hero-badge" id="hero-badge">
-            🎓 BRAC University CSE | B.Sc in Computer Science
-          </div>
-          <h1 class="hero-title">
-            Hi, I'm <span class="gradient-text" id="hero-title-name">Mubtasim Ariyan</span>.
-          </h1>
-          <div class="hero-typing-container">
-            I am a &nbsp;<span class="hero-typing" id="hero-typing"></span>
-          </div>
-          <p class="hero-description" id="hero-desc">
-            Computer Science undergraduate at BRAC University combining technical expertise, business acumen, and leadership skills to drive impactful solutions.
-          </p>
-
-          <div class="hero-cta">
-            <a href="experience.html" class="btn btn-primary">
-              <i class="fas fa-briefcase"></i> View Experience
-            </a>
-            <a href="contact.html" class="btn btn-secondary">
-              <i class="fas fa-paper-plane"></i> Get In Touch
-            </a>
-            <a href="#" class="btn btn-secondary" id="resume-btn" target="_blank" rel="noopener">
-              <i class="fas fa-file-download"></i> Resume
-            </a>
-          </div>
-
-          <div class="social-links">
-            <!-- Rendered dynamically -->
-          </div>
+        <div class="nav-actions">
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Toggle Theme"
+          >
+            <i class="fas fa-sun"></i>
+          </button>
+          <button
+            class="mobile-toggle"
+            id="mobile-toggle"
+            aria-label="Toggle Navigation Menu"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
+      </div>
+    </header>
 
-        <div class="hero-visual">
-          <div class="avatar-card">
-            <div class="avatar-img-wrapper">
-              <div class="avatar-img">
-                <i class="fas fa-user-graduate"></i>
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" id="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <div class="hero-badge" id="hero-badge">
+              🎓 BRAC University CSE | B.Sc in Computer Science
+            </div>
+            <h1 class="hero-title">
+              Hi, I'm
+              <span class="gradient-text" id="hero-title-name"
+                >Mubtasim Ariyan</span
+              >.
+            </h1>
+            <div class="hero-typing-container">
+              I am a &nbsp;<span class="hero-typing" id="hero-typing"></span>
+            </div>
+            <p class="hero-description" id="hero-desc">
+              Computer Science undergraduate at BRAC University combining
+              technical expertise, business acumen, and leadership skills to
+              drive impactful solutions.
+            </p>
+
+            <div class="hero-cta">
+              <a href="experience.html" class="btn btn-primary">
+                <i class="fas fa-briefcase"></i> View Experience
+              </a>
+              <a href="contact.html" class="btn btn-secondary">
+                <i class="fas fa-paper-plane"></i> Get In Touch
+              </a>
+              <a
+                href="#"
+                class="btn btn-secondary"
+                id="resume-btn"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fas fa-file-download"></i> Resume
+              </a>
+            </div>
+
+            <div class="social-links">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="avatar-card">
+              <div class="avatar-img-wrapper">
+                <div class="avatar-img" id="avatar-img">
+                  <img id="avatar-photo" src="" alt="Mubtasim Ariyan" hidden />
+                  <i class="fas fa-user-graduate" id="avatar-placeholder"></i>
+                </div>
+              </div>
+              <h3 class="avatar-name" id="avatar-name">Mubtasim Ariyan</h3>
+              <p class="avatar-title" id="avatar-title">
+                Computer Science @ BRACU
+              </p>
+              <div class="status-indicator">
+                <span class="status-dot"></span>
+                <span id="availability-text">Available for Internships</span>
               </div>
             </div>
-            <h3 class="avatar-name" id="avatar-name">Mubtasim Ariyan</h3>
-            <p class="avatar-title" id="avatar-title">Computer Science @ BRACU</p>
-            <div class="status-indicator">
-              <span class="status-dot"></span>
-              <span id="availability-text">Available for Internships</span>
-            </div>
           </div>
         </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <p>
+          &copy; <span id="year">2026</span> Mubtasim Ariyan. Computer Science
+          Undergraduate @ BRAC University.
+        </p>
       </div>
-    </section>
+    </footer>
 
+    <div class="toast-container" id="toast-container"></div>
 
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-content">
-      <p>&copy; <span id="year">2026</span> Mubtasim Ariyan. Computer Science Undergraduate @ BRAC University.</p>
-    </div>
-  </footer>
-
-  <div class="toast-container" id="toast-container"></div>
-
-  <script src="js/config.js?v=4"></script>
-  <script src="js/main.js?v=4"></script>
-</body>
+    <script src="js/config.js?v=4"></script>
+    <script src="js/main.js?v=4"></script>
+  </body>
 </html>
-

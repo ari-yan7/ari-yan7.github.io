@@ -6,6 +6,7 @@
 const PORTFOLIO_DATA = {
   personal: {
     name: "Mubtasim Ariyan",
+    image: "assets/images/profile.jpg",
     headline: "Computer Science Undergraduate @ BRAC University",
     subheadline: "Tech Enthusiast | Leadership & Stakeholder Management | AI & Machine Vision Learner",
     bio: "Computer Science undergraduate at BRAC University combining technical expertise, business acumen, and leadership skills. Experienced in leading university initiatives, coordinating cross-functional teams, managing corporate partnerships, and applying tech solutions to real-world challenges.",

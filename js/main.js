@@ -98,6 +98,18 @@ function renderSharedElements(data) {
   const avatarTitle = document.getElementById('avatar-title');
   if (avatarTitle) avatarTitle.textContent = personal.headline;
 
+  const avatarPhoto = document.getElementById('avatar-photo');
+  const avatarPlaceholder = document.getElementById('avatar-placeholder');
+  if (avatarPhoto && avatarPlaceholder && personal.image) {
+    avatarPhoto.src = personal.image;
+    avatarPhoto.hidden = false;
+    avatarPlaceholder.hidden = true;
+    avatarPhoto.onerror = () => {
+      avatarPhoto.hidden = true;
+      avatarPlaceholder.hidden = false;
+    };
+  }
+
   const availabilityText = document.getElementById('availability-text');
   if (availabilityText) availabilityText.textContent = personal.availability;
 

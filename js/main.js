@@ -125,12 +125,12 @@ function renderSharedElements(data) {
   const socialContainers = document.querySelectorAll('.social-links');
   socialContainers.forEach(container => {
     container.innerHTML = `
-      <a href="${personal.github}" target="_blank" rel="noopener" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="${personal.linkedin}" target="_blank" rel="noopener" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      <a href="${personal.facebook}" target="_blank" rel="noopener" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="${personal.instagram}" target="_blank" rel="noopener" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="mailto:${personal.email}" class="social-icon" title="Email"><i class="fas fa-envelope"></i></a>
-      <a href="tel:${personal.phone}" class="social-icon" title="Phone"><i class="fas fa-phone-alt"></i></a>
+      <a href="${personal.github}" target="_blank" rel="noopener" class="social-icon" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i><span class="social-label">GitHub</span></a>
+      <a href="${personal.linkedin}" target="_blank" rel="noopener" class="social-icon" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i><span class="social-label">LinkedIn</span></a>
+      <a href="${personal.facebook}" target="_blank" rel="noopener" class="social-icon" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i><span class="social-label">Facebook</span></a>
+      <a href="${personal.instagram}" target="_blank" rel="noopener" class="social-icon" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i><span class="social-label">Instagram</span></a>
+      <a href="mailto:${personal.email}" class="social-icon" title="Email" aria-label="Email"><i class="fas fa-envelope"></i><span class="social-label">Email</span></a>
+      <a href="tel:${personal.phone}" class="social-icon" title="Phone" aria-label="Phone"><i class="fas fa-phone-alt"></i><span class="social-label">Phone</span></a>
     `;
   });
 

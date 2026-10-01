@@ -1279,11 +1279,24 @@ body {
 }
 
 .contact-social-column .social-icon {
-  width: 54px;
-  height: 54px;
-  justify-self: start;
-  border-radius: var(--radius-md);
+  width: 100%;
+  height: 46px;
+  justify-self: stretch;
+  justify-content: flex-start;
+  gap: 0.7rem;
+  padding: 0 1rem;
+  border-radius: var(--radius-full);
   font-size: 1.1rem;
+}
+
+.social-label {
+  display: none;
+}
+
+.contact-social-column .social-label {
+  display: inline;
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
 .contact-item {
